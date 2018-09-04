@@ -29,9 +29,24 @@ public class Agenda_electronica {
         System.out.println("3. Salir");
         System.out.println();
         System.out.print("Elija → ");
+        opc = tec.nextInt();
+        System.out.println();
+        System.out.println();
         
+        while(opc==0 || opc>3){
+            System.out.println("VALOR FUERA DE RANGO.");
+            System.out.print("Ingrese nuevamente su valor → ");
+            opc=tec.nextInt();
+            
+        }
         
-        
+        if(opc==1){
+            sign_in();
+        }else if(opc==2){
+            registro();
+        }else if(opc==3){
+            System.exit(0);
+        }
     }
     
     public void sign_in(){
@@ -42,9 +57,14 @@ public class Agenda_electronica {
         System.out.println("INICIA SESION");
         System.out.println();
         System.out.print("Ingrese nombre de usuario → ");
+        name=tec.nextInt();
         System.out.println();
         System.out.print("Ingrese contraseña → ");
+        pass=tec.nextInt();
         
+        
+        
+        welcome();
         
         
     }
@@ -58,10 +78,13 @@ public class Agenda_electronica {
         System.out.println("MENU DE REGISTRO ");
         System.out.println();
         System.out.print("Ingrese su nombre → ");
+        name=tec.nextInt();
         System.out.println();
         System.out.print("Ingrese correo electronico → ");
+        email=tec.nextInt();
         System.out.println();
         System.out.print("Ingrese su contraseña →");
+        pass=tec.nextInt();
         System.out.println();
         System.out.print("Ingrese nuevamente su contraseña");
         System.out.println();
