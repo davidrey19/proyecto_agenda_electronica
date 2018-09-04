@@ -22,6 +22,15 @@ public class Agenda_electronica {
     }
     public void home(){
         //Aqui sera el menu principal
+        System.out.println("MENU DE PRINCIPAL.");
+        System.out.println();
+        System.out.println("1. Iniciar Sesion");
+        System.out.println("2. Registrarse");
+        System.out.println("3. Salir");
+        System.out.println();
+        System.out.print("Elija → ");
+        
+        
         
     }
     
@@ -29,6 +38,15 @@ public class Agenda_electronica {
         //aqui se ingresara normalmente
         int name;
         int pass;
+        
+        System.out.println("INICIA SESION");
+        System.out.println();
+        System.out.print("Ingrese nombre de usuario → ");
+        System.out.println();
+        System.out.print("Ingrese contraseña → ");
+        
+        
+        
     }
     
     public void registro(){
@@ -36,6 +54,17 @@ public class Agenda_electronica {
         int name;
         int pass;
         int email;
+        
+        System.out.println("MENU DE REGISTRO.");
+        System.out.println();
+        System.out.print("Ingrese su nombre → ");
+        System.out.println();
+        System.out.print("Ingrese correo electronico → ");
+        System.out.println();
+        System.out.print("Ingrese su contraseña →");
+        System.out.println();
+        System.out.print("Ingrese nuevamente su contraseña");
+        System.out.println();
         
     }
     
