@@ -55,7 +55,7 @@ public class Agenda_electronica {
         int pass;
         int email;
         
-        System.out.println("MENU DE REGISTRO.");
+        System.out.println("MENU DE REGISTRO ");
         System.out.println();
         System.out.print("Ingrese su nombre → ");
         System.out.println();
