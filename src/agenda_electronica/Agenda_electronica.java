@@ -34,7 +34,7 @@ public class Agenda_electronica {
         System.out.println();
         
         while(opc==0 || opc>3){
-            System.out.println("VALOR FUERA DE RANGO.");
+            System.out.println("VALOR FUERA DE RANGO");
             System.out.print("Ingrese nuevamente su valor → ");
             opc=tec.nextInt();
             System.out.println();
