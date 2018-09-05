@@ -47,6 +47,7 @@ public class Agenda_electronica {
         }else if(opc==2){
             registro();
         }else if(opc==3){
+            System.out.println("Gracias por usar la agenda ");
             System.exit(0);
         }
     }
