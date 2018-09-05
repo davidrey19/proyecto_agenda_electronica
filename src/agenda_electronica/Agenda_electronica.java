@@ -37,7 +37,9 @@ public class Agenda_electronica {
             System.out.println("VALOR FUERA DE RANGO.");
             System.out.print("Ingrese nuevamente su valor → ");
             opc=tec.nextInt();
-            
+            System.out.println();
+            System.out.println();
+         
         }
         
         if(opc==1){
@@ -51,16 +53,17 @@ public class Agenda_electronica {
     
     public void sign_in(){
         //aqui se ingresara normalmente
-        int name;
-        int pass;
+        String name;
+        String pass;
         
         System.out.println("INICIA SESION");
         System.out.println();
         System.out.print("Ingrese nombre de usuario → ");
-        name=tec.nextInt();
+        name=tec.nextLine();
+        tec.nextLine();
         System.out.println();
         System.out.print("Ingrese contraseña → ");
-        pass=tec.nextInt();
+        pass=tec.nextLine();
         
         
         
@@ -71,28 +74,44 @@ public class Agenda_electronica {
     
     public void registro(){
         //Aqui se crearan las cuentas
-        int name;
-        int pass;
-        int email;
+        String name;
+        String pass;
+        String email;
+        String verificacion;
         
         System.out.println("MENU DE REGISTRO ");
         System.out.println();
         System.out.print("Ingrese su nombre → ");
-        name=tec.nextInt();
+        name=tec.nextLine();
+        tec.nextLine();
         System.out.println();
         System.out.print("Ingrese correo electronico → ");
-        email=tec.nextInt();
+        email=tec.nextLine();
         System.out.println();
-        System.out.print("Ingrese su contraseña →");
-        pass=tec.nextInt();
+        System.out.print("Ingrese su contraseña → ");
+        pass=tec.nextLine();
         System.out.println();
-        System.out.print("Ingrese nuevamente su contraseña");
+        System.out.print("Ingrese nuevamente su contraseña → ");
+        verificacion = tec.nextLine();
         System.out.println();
+        System.out.println();
+        
+        while(pass == null ? verificacion != null : !pass.equals(verificacion) ){
+            System.out.println("Las contraseñan NO  cuadran!");
+            System.out.print("Ingrese su contraseña nuevamente → ");
+            pass=tec.nextLine();
+            System.out.print("Ingrese nuevamente su contraseña → ");
+            verificacion = tec.nextLine();
+            System.out.println();
+            System.out.println();
+        }
         
     }
     
     public void welcome(){
         //aqui dara un anuncio de bienvenido y se preguntara si pasa a crear evento o  sale al menu principal
+        
+        System.out.println("Bienvenido");
     }
     
     public void menu_control_eventos(){
