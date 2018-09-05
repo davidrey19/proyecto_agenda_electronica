@@ -55,27 +55,41 @@ public class Agenda_electronica {
     
     public void sign_in(){
         //aqui se ingresara normalmente
-        /*String name;
+        String name;
         String pass;
+        boolean ark = true;
         
         System.out.println("INICIA SESION");
         System.out.println();
         System.out.print("Ingrese nombre de usuario → ");
-        name=tec.nextLine();
         tec.nextLine();
+        name=tec.nextLine();
         System.out.println();
-        System.out.print("Ingrese contraseña → ");
-        pass=tec.nextLine();
+          for(int y = 0; y < usuarios.length ; y++){
+            for(int i =0 ; i < usuarios[y].length ;  i++){
+                    
+                if(usuarios[y][0] == null ? name == null : usuarios[y][0].equals(name) ){
+                    ark = true;
+                        break;
+                }else{
+                    ark = false;
+                }
+            }
+        } 
+        if(ark == true){
+            System.out.print("Ingrese contraseña → ");
+            pass=tec.nextLine();  
+            System.out.println();
+        }else{
+            System.out.println("usuario no regustrado");
+             sign_in();
+        }
         
+       
         
-        
-        welcome();*/
-        
-       System.out.println(usuarios[0][0]);
-       System.out.println(usuarios[0][1]);
-       System.out.println(usuarios[0][2]);
-        
-    }
+            
+  
+     }
     
     public void registro(){
         //Aqui se crearan las cuentas
@@ -127,6 +141,7 @@ public class Agenda_electronica {
         //aqui dara un anuncio de bienvenido y se preguntara si pasa a crear evento o  sale al menu principal
         
         System.out.println("Bienvenido");
+        home();
     }
     
     public void menu_control_eventos(){
