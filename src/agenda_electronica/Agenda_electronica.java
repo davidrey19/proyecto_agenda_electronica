@@ -13,9 +13,10 @@ import java.util.Scanner;
  */
 public class Agenda_electronica {
     Scanner tec = new Scanner(System.in); //Escaner se llama "tec"
+    int contador = 0;
     int opc; //Esta sera la variable que se utilizara para cuando se elija una opcion en los menu
-    String usuarios [] [] = new String [0][3]; //array donde se almacena los usuarios
-    int contador; // Este sera un contador para aumentar el array;
+    String usuarios [] [] = new String [50][3]; //array donde se almacena los usuarios
+     // Este sera un contador para aumentar el array;
     
     public Agenda_electronica() {
        home();
@@ -54,7 +55,7 @@ public class Agenda_electronica {
     
     public void sign_in(){
         //aqui se ingresara normalmente
-        String name;
+        /*String name;
         String pass;
         
         System.out.println("INICIA SESION");
@@ -68,23 +69,28 @@ public class Agenda_electronica {
         
         
         
-        welcome();
+        welcome();*/
         
+       System.out.println(usuarios[0][0]);
+       System.out.println(usuarios[0][1]);
+       System.out.println(usuarios[0][2]);
         
     }
     
     public void registro(){
         //Aqui se crearan las cuentas
+        
         String name;
         String pass;
         String email;
         String verificacion;
         
+        
         System.out.println("MENU DE REGISTRO ");
         System.out.println();
         System.out.print("Ingrese su nombre → ");
-        name=tec.nextLine();
         tec.nextLine();
+        name=tec.nextLine();
         System.out.println();
         System.out.print("Ingrese correo electronico → ");
         email=tec.nextLine();
@@ -107,6 +113,14 @@ public class Agenda_electronica {
             System.out.println();
         }
         
+        
+                usuarios[contador][0] = name;
+                usuarios[contador][1] = email;
+                usuarios[contador][2] = pass;
+                
+                
+        contador++;
+        home();
     }
     
     public void welcome(){
