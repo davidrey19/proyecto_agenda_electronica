@@ -19,7 +19,23 @@ public class Agenda_electronica {
      // Este sera un contador para aumentar el array;
     
     public Agenda_electronica() {
-       home();
+        home();
+        
+        System.out.println( "\033[36m--------------------------------------------------------" );
+        System.out.println( "BINENVENIDO AL SISTEMA ERES EL USUARIO #" );
+        
+        System.out.println("INICIAR AHORA S/N");
+        opc = tec.nextInt();
+        System.out.println( "\033[36m--------------------------------------------------------" );
+        
+        
+        if(opc==1){
+            home();
+        }else if(opc==2){
+            home();
+        }
+        
+       
     }
     public void home(){
         //Aqui sera el menu principal
@@ -154,6 +170,7 @@ public class Agenda_electronica {
     
     public void ver_evento(){
         //aqui se mostraran todos los eventp
+        System.out.print(usuarios);
     }
 
     
